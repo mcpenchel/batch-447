@@ -1,0 +1,26 @@
+# First difference
+1 ) All models will have an instance variable for id,
+    which will be how we identify them.
+
+    PS: usually it will be an attr_accessor
+
+2 ) When saving an "associated" object to the CSV file,
+    we save the object_id (because we can't save the whole
+    object with all it's attributes to the CSV file)
+
+  ex: on artists.csv, we have the column band_id
+
+3 ) When loading the information from the CSV file,
+    you have to find the associated object through it's id,
+    because the objects should connect to each other, not to
+    each other's ids
+
+  ex: I don't want artist.band_id to work
+      I want artist.band to work, so that I can do
+             artist.band.genre
+
+  PS: for that, you need the other repo in the initialize!
+
+4 ) When adding a new "artist" to the "@artists", we need
+    to give that artist a new ID, which should be the last ID
+    we have + 1

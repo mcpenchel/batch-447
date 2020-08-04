@@ -1,0 +1,4 @@
+id,name,genre,gender,instrument,alive,band_id
+1,Renata,Rock,female,Guitars,true,2
+2,Ozzy,Rock,male,Vocals,true,1
+3,Hendrix,Rock,male,Guitars,false,1
