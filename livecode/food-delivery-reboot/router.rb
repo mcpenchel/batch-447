@@ -1,9 +1,10 @@
 class Router
-  def initialize(meals_controller, customers_controller, sessions_controller)
+  def initialize(meals_controller, customers_controller, sessions_controller, orders_controller)
     @running = true
     @meals_controller = meals_controller
     @customers_controller = customers_controller
     @sessions_controller = sessions_controller
+    @orders_controller = orders_controller
   end
 
   def run
@@ -47,10 +48,8 @@ class Router
     when 2 then @meals_controller.list
     when 3 then @customers_controller.add
     when 4 then @customers_controller.list
-    when 5
-      puts "TO-DO: Add a new order"
-    when 6
-      puts "TO-DO: List undelivered orders"
+    when 5 then @orders_controller.add
+    when 6 then @orders_controller.list_undelivered_orders
     when 7 then log_out
     when 8 then stop
     else
@@ -60,10 +59,8 @@ class Router
 
   def route_delivery_action(action)
     case action
-    when 1
-      puts "TO-DO: Mark an order as delivered"
-    when 2
-      puts "TO-DO: List my undelivered orders"
+    when 1 then @orders_controller.mark_as_delivered(@current_user)
+    when 2 then @orders_controller.list_my_orders(@current_user)
     when 3 then log_out
     when 4 then stop
     else
