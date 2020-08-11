@@ -16,9 +16,8 @@
 
 WHEN CREATING A MIGRATION, ALWAYS (until we get to Rails):
 
-1 ) TIMESTAMP=`rake db:timestamp`
-
-2 ) touch db/migrate/${TIMESTAMP}_create_users.rb
+```TIMESTAMP=`rake db:timestamp`
+touch db/migrate/${TIMESTAMP}_create_users.rb```
 
 
 Inside the migration, it's always:
