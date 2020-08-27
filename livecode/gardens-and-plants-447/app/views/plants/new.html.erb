@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <h1>New plant for <%= @garden.name %></h1>
+    <%= simple_form_for [@garden, @plant] do |f| %>
+      <%= f.input :name, placeholder: "Palm tree" %>
+      <%= f.input :image_url, placeholder: "https://some_nice_image_found_on_google.jpg" %>
+      <%= f.submit "Add", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
