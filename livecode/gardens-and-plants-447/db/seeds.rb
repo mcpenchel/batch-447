@@ -1,21 +1,21 @@
-my_garden = Garden.create!(
-  name: "My Little Garden",
-  banner_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_1.jpg"
+den_of_foul_plants = Garden.create!(
+  name: "Den of Foul Plants",
+  banner_url: "https://steamuserimages-a.akamaihd.net/ugc/535135100393570816/F8448BB90A4C8E5FF4DD3BD56F1D90193C00694B/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
 )
 
-my_other_garden = Garden.create!(
-  name: "My Other Garden",
-  banner_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_2.jpg"
-)
-
-Plant.create!(
-  name: "Samambaia",
-  image_url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1TsNlPXXXXXcyXVXXq6xXFXXXx%2FSimula-o-persa-samambaia-samambaia-grama-planta-verde-artificial-deixa-flor-tape-aria-plantas-casa-loja.jpg&f=1&nofb=1",
-  garden: my_garden
+garden_of_suffering = Garden.create!(
+  name: "Garden of Suffering",
+  banner_url: "https://www.wagmag.com/wp-content/uploads/2017/05/John_Everett_Millais_-_Ophelia_-_Google_Art_Project-690x469.jpg"
 )
 
 Plant.create!(
-  name: "Monsterra",
-  image_url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.crocdn.co.uk%2Fimages%2Fproducts2%2Fpl%2F20%2F00%2F03%2F27%2Fpl2000032789.jpg%3Fwidth%3D940%26height%3D940&f=1&nofb=1",
-  garden: my_garden
+  name: "Murdersynthesis",
+  image_url: "https://d3926qxcw0e1bh.cloudfront.net/post_photos/a3/5a/a35a8c73f4ffd7c3e82937dc4d9a220a.jpg.crop800x450.jpg",
+  garden: den_of_foul_plants
+)
+
+Plant.create!(
+  name: "Stalker of the Woods",
+  image_url: "https://c.pxhere.com/photos/58/00/face_scary_horror_spooky_evil_creepy_expression_tree-1393484.jpg!d",
+  garden: den_of_foul_plants
 )

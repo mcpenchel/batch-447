@@ -1,5 +1,10 @@
 class PlantsController < ApplicationController
-  # /gardens/:garden_id/plants/nen
+
+  def show
+    @plant = Plant.find(params[:id])
+  end
+
+
   def new
     @garden = Garden.find(params[:garden_id])
     @plant = Plant.new
